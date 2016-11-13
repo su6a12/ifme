@@ -9,6 +9,15 @@ namespace :scheduler do
     MedicationReminders.new.send_refill_reminder_emails
   end
 
+  desc 'Send strategy reminders'
+  task strategy_reminders: :environment do
+    PerformStrategyReminders.new.send_startegy_reminder_emails
+
+  desc 'Send SelfCare reminders'
+  task self_care_reminders: :environment do
+    PerformStrategyReminders.new.send_self_care_strategy_emails
+  end
+
   desc 'Send meeting reminders'
   task send_meeting_reminders: :environment do
     MeetingReminders.new.send_meeting_reminder_emails
