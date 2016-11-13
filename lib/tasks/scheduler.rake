@@ -24,4 +24,3 @@ namespace :scheduler do
     MeetingReminders.new.send_meeting_reminder_emails
   end
 end
-

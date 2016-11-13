@@ -298,7 +298,7 @@ class StrategiesController < ApplicationController
                                       [
                                         :id, :name, :active
                                       ]
-                                     )
+                                    )
   end
 
   def hide_page(strategy)
