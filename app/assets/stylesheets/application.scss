@@ -614,6 +614,8 @@ label {
   display: initial;
   font-size: $font30;
   margin-bottom: 20px;
+  color: initial;
+  padding: 0;
 
   @media screen and (max-width: $medium) {
     font-size: $font26;
