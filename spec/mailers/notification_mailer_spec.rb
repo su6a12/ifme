@@ -4,7 +4,7 @@ describe "NotificationMailer" do
   let(:recipient)  { FactoryGirl.create(:user1, email: "some@user.com") }
   let(:medication) { FactoryGirl.create(:medication, :with_daily_reminder, userid: recipient.id) }
   let(:reminder)   { medication.take_medication_reminder }
-   let(:strategy) { FactoryGirl.create(:strategy, :with_daily_reminder, userid: recipient.id) }
+  let(:strategy) { FactoryGirl.create(:strategy, :with_daily_reminder, userid: recipient.id) }
   let(:reminder)   { medication.take_medication_reminder }
   let(:strategy_reminder)   { strategy.strategy_reminder }
   let(:take_medication_text) { I18n.t('mailers.notification_mailer.medication_subject', name: medication.name) }
@@ -143,5 +143,4 @@ describe "NotificationMailer" do
       it { expect(email.body.encoded).to match(link) }
     end
   end
-
 end
